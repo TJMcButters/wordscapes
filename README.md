@@ -1,0 +1,1 @@
+This is a quick and easy way to beat games like Word Scapes or any other similar games
