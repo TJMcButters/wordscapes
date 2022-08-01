@@ -12,12 +12,9 @@ def main():
         for subset in itertools.combinations(letters, l):
             combos.append(subset)
             
-
-    
     suggestions = []
     temp = ""
     for num, combo in enumerate(combos):
-        print(f"{num}: {combo}")
         for letters in combo:
             temp += letters
         if len(temp) > 2:
@@ -38,7 +35,6 @@ def main():
     
     for x in finalSugs:
         if not d.check(x):
-            print(f"{x}: {d.check(x)}")
             finalSugs.remove(x)
             
     threeletwords = [i for i in finalSugs if len(i) == 3]
@@ -48,5 +44,6 @@ def main():
     print(f"Three letters:\n {threeletwords}")
     print(f"Four Letters:\n {fourletwords}")
     print(f"Five Letters:\n {fiveletwords}")
+    
 if __name__ == "__main__":
     main()
